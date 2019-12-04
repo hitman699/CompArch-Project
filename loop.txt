@@ -1,0 +1,13 @@
+addi $s0 $zero 0
+addi $s1 $zero 5
+addi $s2 $zero 9
+slt $t1 $s0 $s1
+bne $t1 $zero 7
+j 11
+addi $s7 $zero 4
+mul $t0 $s0 $s7
+add $s3 $s2 $t0
+sw $s0 0 $s3
+addi $s0 $s0 1
+j 4
+

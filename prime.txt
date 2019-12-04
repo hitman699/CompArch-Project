@@ -1,0 +1,26 @@
+addi $s0 $zero 2
+addi $s1 $zero 10
+addi $t0 $zero 0 
+addi $t1 $zero 1 
+add $t2 $zero $s0  
+addi $t3 $zero 2 
+mul $t4 $s0 $s1 
+addi $s2 $zero 4
+addi $t1 $zero 1 
+addi $t3 $zero 2 
+div $t2 $t3 
+mfhi $t5
+beq $t5 $zero 20
+addi $t3 $t3 1 
+bne $t3 $t2 11
+addi $s7 $zero 1
+beq $t1 $s7 22
+addi $t2 $t2 1 
+bne $t2 $t4 9
+j 26
+addi $t1 $zero 0 
+j 16
+add $t6 $s2 $t0
+sw $t2 0 $t6
+addi $t0 $t0 4
+j 17
